@@ -4,14 +4,15 @@ Eventos
 */
 
 const input = document.querySelector("#main-input")
-const input2 = document.querySelector(".add")
+const select = document.querySelector("select")
+const button = document.querySelector(".main-button")
 
+select.addEventListener("change", function(){
+    console.log("Troquei de valor")
+})
 
-function cliqueiNoBotao() {
-    input2.innerHTML = input.value
+function troqueiValor(event) {
+    console.log(event)
 }
 
-function digiteiNoInput() {
-    console.log(input.value)
-}
-    
+button.addEventListener("click", troqueiValor)
